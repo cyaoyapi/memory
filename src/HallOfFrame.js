@@ -2,7 +2,7 @@ import React from 'react'
 
 import './HallOfFrame.css'
 
-const HallOfFame = ({ entries }) => (
+const HallOfFrame = ({ entries }) => (
   <table className="hallOfFame">
     <tbody>
       {entries.map(({ id, guesses, date, player }) => (
