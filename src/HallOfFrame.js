@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './HallOfFrame.css'
 
@@ -16,7 +17,19 @@ const HallOfFrame = ({ entries }) => (
   </table>
 )
 
-export default HallOfFame
+HallOfFrame.propTypes = {
+  entries: PropTypes.arrayOf(
+            PropTypes.shape(
+              {
+                id: PropTypes.number.isRequired,
+                guesses: PropTypes.number.isRequired,
+                date: PropTypes.string.isRequired,
+                player: PropTypes.string.isRequired, 
+              }
+            )).isRequired,
+}
+
+export default HallOfFrame
 
 // == Internal helpers ==============================================
 
